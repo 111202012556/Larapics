@@ -23,16 +23,16 @@
 
                     <div>
                         <button type="button" title="Like mage" class="btn btn-primary">
-                            <img src="icons/thumbs-up.svg" alt="" class="align-text-top" width="18" height="18"> 150
+                            <x-icon src="thumbs-up.svg" alt="" class="align-text-top" width="18" height="18"/> 150
                         </button>
 
                         <button type="button" title="Favorite mage" class="btn btn-danger">
-                            <img src="icons/heart.svg" alt="" width="18" height="18">
+                            <x-icon src="heart.svg" alt="" width="18" height="18"/>
                         </button>
                     </div>
 
                     <button title="Download" class="btn btn-success d-flex align-items-center">
-                        <img src="icons/download.svg" alt="" class="align-text-top" width="18" height="18">
+                        <x-icon src="download.svg" alt="" class="align-text-top" width="18" height="18"/>
                         <span class="display-block ms-2">Download</span>
                     </button>
                 </div>
@@ -42,25 +42,25 @@
                         <tbody>
                             <tr>
                                 <th>Uploaded</th>
-                                <td>7 months ago</td>
+                                <td>{{ $image->uploadDate() }}</td>
                             </tr>
                             <tr>
                                 <th>Dimensions</th>
-                                <td>1920x1281</td>
+                                <td>{{ $image->dimension }}</td>
                             </tr>
                             <tr>
                                 <th>Views</th>
-                                <td>7059</td>
+                                <td>{{ $image->views_count }}</td>
                             </tr>
                             <tr>
                                 <th>Downloads</th>
-                                <td>1000</td>
+                                <td>{{ $image->downloads_count }}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="tagcloud mt-3">
+                {{-- <div class="tagcloud mt-3">
                     <ul>
                         <li><a href="#">Nature</a></li>
                         <li><a href="#">Mountain</a></li>
@@ -68,7 +68,7 @@
                         <li><a href="#">Forest</a></li>
                         <li><a href="#">Animal</a></li>
                     </ul>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
